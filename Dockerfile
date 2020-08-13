@@ -2,7 +2,7 @@ FROM grafana/grafana
 
 USER grafana
 
-ARG GF_INSTALL_PLUGINS="savantly-heatmap-panel grafana-clock-panel 1.0.1,grafana-simple-json-datasource 1.3.5"
+ARG GF_INSTALL_PLUGINS="savantly-heatmap-panel,grafana-clock-panel 1.0.1,grafana-simple-json-datasource 1.3.5"
 
 RUN if [ ! -z "${GF_INSTALL_PLUGINS}" ]; then \
     OLDIFS=$IFS; \
